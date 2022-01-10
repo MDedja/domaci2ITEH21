@@ -11,6 +11,14 @@ class Trener extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime',
+        'prezime',
+        'radno_iskustvo',
+        'plata',
+        'teretana_id'
+    ];
+
     public function teretana()
     {
         return $this->belongsTo(Teretana::class);

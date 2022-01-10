@@ -10,6 +10,15 @@ class Clan extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'sifra',
+        'ime',
+        'prezime',
+        'godine',
+        'adresa',
+        'trener_id'
+    ];
+
     public function trener()
     {
         return $this->belongsTo(Trener::class);

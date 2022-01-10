@@ -10,6 +10,13 @@ class Teretana extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'naziv_teretane',
+        'lokacija',
+        'grad',
+        'broj_clanova'
+    ];
+
     public function treneri()
     {
         return $this->hasMany(Trener::class);
